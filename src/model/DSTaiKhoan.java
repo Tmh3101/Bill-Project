@@ -16,8 +16,6 @@ public class DSTaiKhoan {
 		try {
 
 			File file = new File(URLtoPath(DSTaiKhoan.class.getResource("dstaikhoan.data").toString()));
-			System.out.println(URLtoPath(DSTaiKhoan.class.getResource("dstaikhoan.data").toString()));
-			System.out.println(file.getAbsolutePath());
 			InputStream is = new FileInputStream(file);
 			ObjectInputStream ois = new ObjectInputStream(is);
 			while (is.available() > 0) {
@@ -52,8 +50,6 @@ public class DSTaiKhoan {
 		them(otk);
 		try {
 			File file = new File(URLtoPath(DSTaiKhoan.class.getResource("dstaikhoan.data").toString()));
-			System.out.println(URLtoPath(DSTaiKhoan.class.getResource("dstaikhoan.data").toString()));
-			System.out.println(file.getAbsolutePath());
 			OutputStream os = new FileOutputStream(file);
 			ObjectOutputStream oos = new ObjectOutputStream(os);
 			for (TaiKhoan tk : dstk) {
